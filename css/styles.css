@@ -47,7 +47,7 @@ main {
 }
 
 .welcome .container{
-  margin-top: 10%;
+  padding-top: 15%;
 }
 
 .title {
@@ -72,6 +72,7 @@ main {
   z-index: 10;
   align-items: center;
   margin: 0;
+  padding-top: 50px;
 }
 
 .cv a{
@@ -80,7 +81,6 @@ main {
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
-  margin-top: 5px;
   cursor: pointer;
   color: white;
   transition: .3s all ease;
