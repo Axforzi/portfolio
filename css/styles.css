@@ -1,0 +1,365 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+/* TITLE */
+.welcome {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  color: white;
+  justify-content: center;
+  background-image: url("https://access.tutorteknik.com/storage/news/Wbu8agaXwOo3dVQvJlJModoRm38SvgxeiJWWOa2M.jpg");
+  background-size: cover;
+}
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(42, 36, 163, 0) 100%
+  );
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#particles-js{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  position: relative;
+  margin: 0 0 0 40px;
+  font-size: 70px;
+  z-index: 1;
+}
+
+.sub-title {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 0 0 40px;
+  font-size: 35px;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+/* ANIMATION TYPING AND CURSOR */
+.sub-title .knowledge {
+  display: flex;
+  position: relative;
+  top: 0;
+  padding-right: 0px;
+  width: 0%;
+  border-right: 5px solid white;
+  overflow: hidden;
+  animation: cursor 0.5s infinite, typing 3s infinite;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  50% {
+    width: 100%;
+    padding-right: 10px;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+
+/* ABOUT */
+.about{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+  align-self: center;
+  font-size: 30px;
+  gap: 50px;
+  padding: 100px;
+  padding-top: 0;
+  /* box-shadow: 0px -10px 20px #161357; */
+}
+
+.about h2{
+  font-size: 50px;
+}
+
+.description{
+  display: flex;
+  text-align: justify;
+  text-indent: 10px;
+  gap: 30px;
+  flex-wrap: nowrap;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-50%);
+  filter: blur(3px);
+  transition: all .5s ease;
+}
+
+.about .description img{
+  height: 200px;
+}
+
+.section-show .description{
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+  transition: all .5s ease-in;
+}
+
+.about .intro{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* SKILLS */
+.about .skills{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+.container-skills{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.container-skills li{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateX(-50%);
+  filter: blur(3px);
+  transition: all .5s ease-in;
+}
+
+.container-skills li:nth-child(2){
+  opacity: 0;
+  transform: translateX(50%);
+  filter: blur(3px);
+  transition: all .5s ease-in;
+  align-self: flex-end;
+}
+
+.container-skills img{
+  height: 80px;
+}
+
+.section-show .container-skills li{
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+  transition: all .5s ease-in;
+}
+
+.section-show .container-skills li:nth-child(1){
+  transition-delay: .1s;
+}
+
+.section-show .container-skills li:nth-child(2){
+  transition-delay: .6s;
+}
+
+.section-show .container-skills li:nth-child(3){
+  transition-delay: 1.1s;
+}
+
+
+/* PROJECTS */
+.about .projects{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.container-projects{
+  display: flex;
+  position: relative;
+  gap: 30px;
+  overflow: visible;
+  flex-direction: column;
+  margin-top: 20px;
+  min-height: 620px;
+}
+
+.container-projects .project-link{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  filter: blur(3px);
+  opacity: 0;
+  transition: .5s all ease;
+}
+
+.container-projects .project-link:nth-child(1){
+  transform: translateX(-100%);
+}
+
+.container-projects .project-link:nth-child(2){
+  transform: translateX(100%);
+}
+
+.section-show .container-projects .project-link{
+  transform: translateX(0);
+  filter: blur(0);
+  opacity: 1;
+  transition: .5s all ease;
+}
+
+.section-show .container-projects .project-link:nth-child(2){
+  transition-delay: .3s;
+}
+
+.project .container-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.project .text{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background-color: #761B65;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.container-projects .project{
+  display: grid;
+  position: relative;
+  grid-template-columns: 40% minmax(0, 60%);
+  padding: 30px;
+  gap: 30px;
+  background: #4C3E8A;
+  border-radius: 10px;
+  transition: all .3s ease;
+  height: 300px;
+  z-index: 10;
+}
+
+.project:hover{
+  background-color: #8b2779;
+  transition: all .3s ease;
+}
+
+.container-projects a::before{
+  font: var(--fa-font-solid);
+  content: '\f177';
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  position: absolute;
+  top: 0;
+  right: -0px;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  background-color: white;
+  color: black;
+  transform: rotate(180deg);
+  z-index: 10;
+  transition: all .3s ease;
+}
+
+.container-projects a:hover::before{
+  font: var(--fa-font-solid);
+  content: '\f177';
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  background-color: white;
+  color: black;
+  transform: rotate(180deg);
+  z-index: 10;
+  transition: all .3s ease;
+}
+
+.see-more{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: #8b2779;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: .3s all ease;
+}
+
+.see-more::before{
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #8b2779;
+  z-index: -1;
+  transition: .3s all ease;
+}
+
+.see-more:hover{
+  background-color: #b82c9e;
+  transition: .3s all ease;
+}
+
+.see-more:hover::before{
+  top: 5px;
+  left: 5px;
+  transition: .3s all ease;
+}
+

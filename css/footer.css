@@ -1,0 +1,41 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #4C3E8A;
+    align-items: center;
+    justify-content: center;
+  }
+
+footer h2{
+  text-align: center;
+}
+  
+footer .contact{
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  flex-direction: column;
+}
+
+footer a{
+  color: rgb(168, 197, 255);
+  text-decoration: none;
+  transition: .3s all ease;
+}
+
+footer a:hover{
+  color: #100e41;
+  transition: .3s all ease;
+}
+
+footer .rights{
+  display: flex;
+  background-color: #00C89F;
+  color: black;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}

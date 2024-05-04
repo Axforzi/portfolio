@@ -1,0 +1,65 @@
+/* MONTSERRAT */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #161357;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.menu {
+  display: flex;
+  top: -13%;
+  width: 100%;
+  position: fixed;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  height: 80px;
+  background: #161357;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: all .3s ease;
+}
+
+.menu-show{
+  top: 0%;
+  transition: all .3s ease;
+}
+
+.menu nav {
+  display: flex;
+  margin-right: 30px;
+}
+
+.menu-elements {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.menu-elements .menu-element{
+  cursor: pointer;
+}
+
+.menu-element a{
+  text-decoration: none;
+  color: white;
+  transition: all .2s ease;
+}
+
+.menu-element a:hover{
+  text-decoration: none;
+  color: #b82c9e;
+  transition: all .2s ease;
+}

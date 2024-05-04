@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <title>Maikel García</title>
+  </head>
+  <body>
+    <header class="menu">
+      <nav>
+        <ul class="menu-elements">
+          <li class="menu-element"> <a href="projects.html"><i class="fa-solid fa-briefcase"></i> PROYECTOS </a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="welcome">
+        <h1 class="title">Maikel García</h1>
+        <h2 class="sub-title">
+          Desarrollador con conocimientos en
+          <div><span class="knowledge">HTML</span></div>
+        </h2>
+        <div id="particles-js"></div>
+      </div>
+
+      <div class="about">
+        <div class="intro">
+          <h2>Sobre mí</h2>
+          <p class="description">
+            <img src="img/coding.svg" alt="coding" />
+            Soy un practicante autodidacta del desarrollo, diseño y
+            implementación de sitios web y sistemas de información, incluyendo
+            el manejo o administración de bases de datos.
+          </p>
+        </div>
+
+        <ul class="skills">
+          <h2>Habilidades técnicas</h2>
+          <div class="container-skills">
+            <li>Lenguajes, Python y Javascript
+              <div class="img-skills">
+                <img src="img/logos/python-logo.png" alt="">
+                <img src="img/logos/javascript-logo.webp" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="img-skills">
+                <img src="img/logos/flask.svg" alt="" style="filter: brightness(0) invert(1);">
+              </div>
+              Frameworks, Flask
+            </li>
+            <li>
+              Bases de datos, Mysql y MongoDB
+              <img src="img/logos/mysql-logo.webp" alt="">
+              <img src="img/logos/mongodb-logo.png">
+            </li>
+          </div>
+        </ul>
+
+        <div class="projects">
+          <h2>Proyectos</h2>
+          <div class="container-projects">
+            <a href="https://github.com/Axforzi/fromJapan" target="_blank" class="project-link">
+              <div class="project">
+                  <div class="container-img">
+                      <img src="img/fromJapan.png" alt="imagen">
+                  </div>
+                  <div class="text">
+                      <h2>fromJapan</h2>
+                      <p>Sitio web creado en flask para la busqueda de anime, mangas y novelas ligeras.</p>
+                  </div>
+              </div>
+  
+            <a href="https://github.com/Axforzi/telegramBot" target="_blank" class="project-link">
+              <div class="project">
+                  <div class="container-img">
+                      <img src="img/telegramBot_logo.png" alt="imagen">
+                  </div>
+                  <div class="text">
+                      <h2>Telegram Bot</h2>
+                      <p>Bot de telegram que permite la posibilidad de descargar videos y audios de youtube.</p>
+                  </div>
+              </div>
+            </a>
+          </div>
+          <a class="see-more" href="projects.html">Ver mas proyectos...</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contact">
+        <h2>Contacto</h2>
+        <p><i class="fa-regular fa-envelope"></i> garcia.maikelr@gmail.com</p>
+        <p> <i class="fa-solid fa-phone"></i> +58 4121641006</p>
+        <p><a href="https://www.linkedin.com/in/maikel-garcía-8a3b60232/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+      </div>
+      <div class="rights">
+        Creado por Maikel García - 2024
+      </div>
+    </footer>
+
+    <script src="js/animation.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script>
+      particlesJS({
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 6,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.03206824121731046,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 32.06824121731046,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 144.30708547789706,
+            color: "#ffffff",
+            opacity: 0.09620472365193136,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
+</html>
