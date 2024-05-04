@@ -8,9 +8,11 @@ main {
 
 /* TITLE */
 .welcome {
-  display: flex;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  grid-template-columns: 100%;
   position: relative;
-  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   height: 100%;
   color: white;
@@ -44,6 +46,10 @@ main {
   z-index: 1;
 }
 
+.welcome .container{
+  margin-top: 10%;
+}
+
 .title {
   position: relative;
   margin: 0 0 0 40px;
@@ -59,6 +65,30 @@ main {
   font-size: 35px;
   align-items: flex-start;
   z-index: 1;
+}
+
+.cv{
+  cursor: default;
+  z-index: 10;
+  align-items: center;
+  margin: 0;
+}
+
+.cv a{
+  font-size: 30px;
+  background: rgb(78, 81, 255);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+  transition: .3s all ease;
+}
+
+.cv a:hover{
+  background: rgb(58, 61, 201);
+  transition: .3s all ease;
 }
 
 /* ANIMATION TYPING AND CURSOR */
@@ -247,8 +277,12 @@ main {
   transition: .5s all ease;
 }
 
+.section-show .container-projects .project-link:nth-child(1){
+  transition-delay: .1s;
+}
+
 .section-show .container-projects .project-link:nth-child(2){
-  transition-delay: .3s;
+  transition-delay: .6s;
 }
 
 .project .container-img{
