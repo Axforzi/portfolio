@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
     <title>Maikel García</title>
+
+    <script src="js/Hyphenopoly-5.3.0/Hyphenopoly-5.3.0/Hyphenopoly_Loader.js"></script>
+        <script>
+        Hyphenopoly.config({
+            require: {
+                "es": "Supercalifragilisticexpialidocious"
+            },
+            setup: {
+                selectors: {
+                    ".description": {},
+                    ".project .text p": {}
+                }
+            }
+        });
+    </script>
   </head>
   <body>
     <header class="menu">
@@ -34,7 +49,6 @@
         </h2>
         <div id="particles-js"></div>
       </div>
-
       <div class="about">
         <div class="intro">
           <h2>Sobre mí</h2>
@@ -82,7 +96,7 @@
                       <p>Sitio web creado en flask para la busqueda de anime, mangas y novelas ligeras.</p>
                   </div>
               </div>
-  
+            </a>
             <a href="https://github.com/Axforzi/telegramBot" target="_blank" class="project-link">
               <div class="project">
                   <div class="container-img">

@@ -17,7 +17,7 @@ body {
 /* HEADER */
 .menu {
   display: flex;
-  top: -13%;
+  top: -80px;
   width: 100%;
   position: fixed;
   justify-content: flex-end;
@@ -31,7 +31,7 @@ body {
 }
 
 .menu-show{
-  top: 0%;
+  top: 0 !important;
   transition: all .3s ease;
 }
 

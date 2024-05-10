@@ -3,15 +3,16 @@ main{
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding-top: 130px;
+    padding-top: 115px;
     color: white;
 }
 
 .container-projects{
     display: flex;
     width: 100%;
-    padding: 50px;
+    padding: 20px;
     padding-top: 25px;
+    padding-bottom: 40px;
     gap: 50px;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -91,6 +92,10 @@ main{
 
 .project .text p{
     text-align: justify;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .project img{

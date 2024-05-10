@@ -133,6 +133,7 @@ main {
   gap: 50px;
   padding: 100px;
   padding-top: 0;
+  padding-bottom: 0;
   /* box-shadow: 0px -10px 20px #161357; */
 }
 
@@ -151,6 +152,11 @@ main {
   transform: translateX(-50%);
   filter: blur(3px);
   transition: all .5s ease;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .about .description img{
@@ -167,7 +173,7 @@ main {
 .about .intro{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -177,7 +183,7 @@ main {
 .about .skills{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   gap: 80px;
@@ -237,20 +243,18 @@ main {
 .about .projects{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .container-projects{
-  display: flex;
+  display: grid;
   position: relative;
   gap: 30px;
   overflow: visible;
-  flex-direction: column;
   margin-top: 20px;
-  min-height: 620px;
 }
 
 .container-projects .project-link{
@@ -303,6 +307,13 @@ main {
   justify-content: center;
 }
 
+.project .text p{
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 .container-projects .project{
   display: grid;
   position: relative;
@@ -327,11 +338,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 10px;
+  padding-left: 5px;
   position: absolute;
-  top: 0;
-  right: -0px;
-  height: 100%;
+  top: 11%;
+  right: 10px;
+  height: 80%;
   width: 30%;
   border-top-left-radius: 100%;
   border-bottom-left-radius: 100%;
@@ -343,30 +354,15 @@ main {
 }
 
 .container-projects a:hover::before{
-  font: var(--fa-font-solid);
-  content: '\f177';
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 10px;
-  position: absolute;
-  top: 0;
-  right: -50px;
-  height: 100%;
+  right: -25px;
   width: 30%;
-  border-top-left-radius: 100%;
-  border-bottom-left-radius: 100%;
-  background-color: white;
-  color: black;
-  transform: rotate(180deg);
-  z-index: 10;
   transition: all .3s ease;
 }
 
 .see-more{
-  margin-top: 50px;
-  margin-bottom: 100px;
   background-color: #8b2779;
+  margin: 50px 0;
+  margin-top: 10px;
   padding: 10px;
   color: white;
   text-decoration: none;
@@ -376,12 +372,12 @@ main {
 
 .see-more::before{
   content: '';
-  top: 0;
-  left: 0;
+  top: 5px;
+  right: 5px;
   height: 100%;
   width: 100%;
   position: absolute;
-  background-color: #8b2779;
+  background-color: #b82c9e;
   z-index: -1;
   transition: .3s all ease;
 }
@@ -393,7 +389,8 @@ main {
 
 .see-more:hover::before{
   top: 5px;
-  left: 5px;
+  right: -5px;
   transition: .3s all ease;
+  background: #8b2779;
 }
 
