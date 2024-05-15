@@ -66,6 +66,10 @@
     .projects-main .text h2{
         font-size: 1.5rem;
     }
+
+    .see-more{
+        margin-top: 10px;
+    }
 }
 
 /* LANDSCAPE ORIENTATION */
