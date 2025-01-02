@@ -146,6 +146,7 @@ main {
   text-align: justify;
   text-indent: 10px;
   gap: 30px;
+  font-size: 1.5rem;
   flex-wrap: nowrap;
   align-items: center;
   opacity: 0;
@@ -195,6 +196,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 60px;
+
+  li:nth-child(2) .img-skills{
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .container-skills li{

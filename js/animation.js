@@ -48,7 +48,6 @@ const projects = about.querySelector(".projects");
 const footer = document.querySelector("footer");
 const sectionAnimation = (entries) => {
     entries.forEach( entry => {
-        console.log(entry.target, entry.intersectionRatio);
         if (entry.isIntersecting || entry.target.classList.contains("section-show")){
             entry.target.classList.toggle("section-show");
         }
