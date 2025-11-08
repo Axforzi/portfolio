@@ -1,5 +1,5 @@
 const textTyping = document.querySelector(".knowledge");
-const text = ["JavaScript", "HTML", "CSS", "Python"];
+const text = ["JavaScript", "Python", "HTML5", "CSS3", "Django", "React", "SQL", "Git"];
 let cont = 0
 
 setInterval(() => {

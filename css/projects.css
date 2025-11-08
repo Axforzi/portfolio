@@ -101,3 +101,118 @@ main{
 .project img{
     height: 120px;
 }
+
+/* Estilos para la sección de sitios WordPress añadida en projects.html */
+.wordpress-projects{
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 54px;
+    padding: 12px;
+}
+
+.wp-list{
+    background: transparent;
+    border-radius: 12px;
+}
+
+.wp-list summary{
+    cursor: pointer;
+    list-style: none;
+    display: block;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(76,62,138,0.9); /* similar al color de los proyectos */
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background .2s ease, box-shadow .15s ease;
+}
+
+.wp-list summary:hover{
+    background: #8b2779;
+}
+
+/* Quitar el marcador nativo y usar un pseudo-elemento como flecha */
+.wp-list summary::-webkit-details-marker{ display: none; }
+.wp-list summary::after{
+    content: '▾';
+    float: right;
+    transition: transform .25s ease;
+    font-size: 1.05rem;
+}
+.wp-list[open] summary::after{
+    transform: rotate(180deg);
+}
+
+.wp-list p{
+    margin: 12px 0;
+    color: #e6e6e6;
+    line-height: 1.4;
+}
+
+.wp-list ul{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.wp-list li a{
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background .18s ease, transform .12s ease;
+}
+
+.wp-list li a:hover{
+    background: #8b2779;
+    transform: translateY(-3px);
+}
+
+.wp-list summary:focus{
+    outline: 2px solid rgba(139,39,121,0.35);
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px){
+    .wp-list ul{ grid-template-columns: 1fr; }
+    .wp-list summary{ font-size: .95rem; }
+}
+
+/* Contenedor interno animable para <details> */
+.wp-content{
+    height: 0px; /* será animado por JS */
+    overflow: hidden;
+    transition: height .33s ease;
+}
+
+.wp-content > * {
+    padding: 8px 0; /* separación interna para párrafo y lista */
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 10px;
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: rgb(214, 212, 255);
+  }
+  svg{
+    height: 20px;
+    width: 20px;
+    color: white;
+  }
+}

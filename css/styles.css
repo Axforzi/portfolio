@@ -143,6 +143,7 @@ main {
 
 .description{
   display: flex;
+  flex-direction: column-reverse;
   text-align: justify;
   text-indent: 10px;
   gap: 30px;
@@ -177,6 +178,7 @@ main {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
   gap: 30px;
 }
 
@@ -400,3 +402,24 @@ main {
   background: #8b2779;
 }
 
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 10px;
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: rgb(214, 212, 255);
+  }
+  svg{
+    height: 20px;
+    width: 20px;
+    color: white;
+  }
+}
