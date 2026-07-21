@@ -1,0 +1,87 @@
+/* Projects Specific Styles */
+
+.projects-main h1 {
+  text-align: center;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: -0.03em;
+  text-shadow: var(--shadow-glow);
+  color: #fff;
+}
+
+.wordpress-projects {
+  margin-top: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-list {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.wp-list summary {
+  padding: 1.5rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.wp-list summary:hover {
+  background: rgba(0, 242, 254, 0.05);
+  color: var(--accent-primary);
+}
+
+/* Custom dropdown arrow using summary marker */
+.wp-list summary::marker {
+  color: var(--accent-primary);
+}
+.wp-list summary::-webkit-details-marker {
+  color: var(--accent-primary);
+}
+
+.wp-content {
+  padding: 0 2rem;
+  overflow: hidden;
+  transition: height var(--transition-slow);
+}
+
+.wp-content p {
+  margin-top: 1rem;
+}
+
+.wp-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1.5rem 0 2rem 0;
+  padding-left: 1rem;
+}
+
+.wp-content ul li::before {
+  content: '→';
+  color: var(--accent-primary);
+  margin-right: 0.8rem;
+  font-weight: bold;
+}
+
+.wp-content a {
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.wp-content a:hover {
+  border-bottom-color: var(--accent-primary);
+}
