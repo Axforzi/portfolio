@@ -1,0 +1,91 @@
+/* Premium Glassmorphism Header */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(7, 9, 14, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  padding: 1.2rem 0;
+}
+
+.menu nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.menu-elements {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-element a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-element a i {
+  font-size: 1.1em;
+  color: var(--accent-primary);
+  opacity: 0.8;
+  transition: transform var(--transition-fast);
+}
+
+/* Hover & Active Effects */
+.menu-element a:hover, .menu-element a.active {
+  color: #fff;
+}
+.menu-element a:hover i, .menu-element a.active i {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--accent-primary);
+  text-shadow: var(--shadow-glow);
+}
+
+.menu-element a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--accent-gradient);
+  transition: width var(--transition-normal), left var(--transition-normal);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+  border-radius: 2px;
+}
+
+.menu-element a:hover::after, .menu-element a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Minimal styling for smaller screens inside responsive.css, 
+   but basic layout flex wrap here for safety */
+@media (max-width: 768px) {
+  .menu-elements {
+    gap: 1.5rem;
+  }
+}
