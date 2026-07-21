@@ -1,9 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { allProjects, wordpressSites } from '../data/projects';
 
 export default function Projects() {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language?.substring(0, 2) || 'es';
+
   return (
     <>
-      <h1 className="text-gradient" style={{paddingTop: 60}}>PROYECTOS</h1>
+      <h1 className="text-gradient" style={{paddingTop: 60}}>{t('projectsPage.title')}</h1>
 
       <div className="container-projects">
         {allProjects.map((project) => (
@@ -18,7 +22,7 @@ export default function Projects() {
               </div>
               <div className="text">
                 <h2>{project.title}</h2>
-                <p>{project.description}</p>
+                <p>{lang === 'en' ? project.descriptionEn : project.description}</p>
               </div>
             </div>
           </a>
@@ -27,10 +31,10 @@ export default function Projects() {
 
       <section className="wordpress-projects">
         <details className="wp-list">
-          <summary>Otros Proyectos (WordPress) — Trabajos en Clinmedia</summary>
+          <summary>{t('projectsPage.wpSummary')}</summary>
           <div className="wp-content">
             <p>
-              Estos son algunos de los sitios web realizados en WordPress durante mi participación en Clinmedia como parte del programa <strong className="text-main">Kit Digital en España</strong>. Demostrando mi versatilidad como desarrollador Full-Stack, trabajé exitosamente en el maquetado, diseño UI, implementación y mantenimiento de los siguientes corporativos:
+              {t('projectsPage.wpDesc1')} <strong className="text-main">{t('projectsPage.wpKitDigital')}</strong>{t('projectsPage.wpDesc2')}
             </p>
             <ul>
               {wordpressSites.map((site) => (

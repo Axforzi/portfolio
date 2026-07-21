@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "projects": "PROYECTOS",
+    "services": "SERVICIOS",
+    "ariaLabel": "Navegación principal"
+  },
+  "hero": {
+    "subtitle": "Construyo webs que hacen crecer tu negocio",
+    "specializedIn": "Especializado en",
+    "downloadCV": "Descargar CV",
+    "viewServices": "Ver servicios"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "alt": "coding illustration",
+    "bio1": "Soy un Desarrollador Full-Stack autodidacta apasionado por construir aplicaciones web completas, funcionales y atractivas. Me especializo en crear soluciones sólidas, abarcando desde la lógica y bases de datos en el Backend (Python, Django) hasta interfaces de usuario dinámicas y modernas en el Frontend (React, JavaScript).",
+    "bio2": "Mi capacidad para dominar ambas áreas me permite tener una visión integral de cada desarrollo, centrándome tanto en la UX/UI como en la arquitectura y escalabilidad. Además, cuento con gran experiencia en optimización de datos, Web Scraping y resolución de requerimientos técnicos complejos."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "técnicas",
+    "databases": "Bases de Datos"
+  },
+  "stats": {
+    "heading": "Mi trabajo habla por mí",
+    "sitesDelivered": "Sitios web entregados",
+    "sitesDesc": "Desarrollados para empresas y negocios a través del programa Kit Digital en España.",
+    "publicProjects": "Proyectos públicos",
+    "projectsDesc": "Aplicaciones web, bots y herramientas open-source disponibles en GitHub.",
+    "techMastered": "Tecnologías dominadas",
+    "techDesc": "Python, React, Django, Flask, Web Scraping y bases de datos."
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "step1Title": "Cuéntame tu proyecto",
+    "step1Desc": "Llena el formulario con tu idea y lo que necesitas. No importa si no tienes todos los detalles.",
+    "step2Title": "Te doy una propuesta",
+    "step2Desc": "Te contacto en menos de 24 horas con un plan claro, presupuesto y plazos.",
+    "step3Title": "Construimos tu web",
+    "step3Desc": "Desarrollo, revisiones, ajustes y entrega final. Siempre contigo en el proceso.",
+    "viewPlans": "Ver planes y precios"
+  },
+  "featuredProjects": {
+    "title": "Proyectos",
+    "highlight": "Destacados",
+    "seeAll": "Ver todos los proyectos"
+  },
+  "projectsPage": {
+    "title": "PROYECTOS",
+    "wpSummary": "Otros Proyectos (WordPress) — Trabajos en Clinmedia",
+    "wpDesc1": "Estos son algunos de los sitios web realizados en WordPress durante mi participación en Clinmedia como parte del programa",
+    "wpKitDigital": "Kit Digital en España",
+    "wpDesc2": ". Demostrando mi versatilidad como desarrollador Full-Stack, trabajé exitosamente en el maquetado, diseño UI, implementación y mantenimiento de los siguientes corporativos:"
+  },
+  "services": {
+    "title": "Servicios Freelance",
+    "heroDesc": "Desarrollo web, scraping y automatización a tu medida. Precios claros, comunicación directa y código de altisima calidad.",
+    "responseTime": "Respondo en menos de 24 horas",
+    "plansTitle": "Planes de Desarrollo Web",
+    "choosePlan": "Elegir plan",
+    "customTitle": "Servicios a Medida",
+    "request": "Solicitar",
+    "fallbackPrice": "Presupuesto a convenir"
+  },
+  "modal": {
+    "startProject": "Iniciemos tu Proyecto",
+    "subtitle": "Llena estos datos y me comunicaré contigo en tiempo récord.",
+    "nameLabel": "Tu nombre / Empresa",
+    "namePlaceholder": "Ej: Carlos Rodríguez",
+    "emailLabel": "Tu email",
+    "emailPlaceholder": "tu@email.com",
+    "descLabel": "Descripción detallada",
+    "descPlaceholder": "Coméntame qué necesitas solucionar o construir, referencias y plazos.",
+    "submitBtn": "Enviar detalles de inmediato",
+    "sending": "Enviando...",
+    "errorSend": "Error al enviar.",
+    "errorNetwork": "Error de red. Verifica tu conexión e inténtalo de nuevo.",
+    "closeAria": "Cerrar modal",
+    "successTitle": "¡Datos recibidos con éxito!",
+    "successMsg1": "Me comunicaré contigo desde",
+    "successMsg2": "en menos de",
+    "successMsg3": "horas",
+    "successMsg4": "Mientras tanto, ¿quieres ver mis trabajos anteriores?",
+    "viewProjects": "Ver proyectos",
+    "close": "Cerrar",
+    "customPrice": "A convenir"
+  },
+  "footer": {
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos.",
+    "whatsappAria": "Contactar por WhatsApp",
+    "whatsappBtn": "Escribir por WhatsApp",
+    "whatsappMsg": "Hola%20Maikel%2C%20me%20interesa%20un%20proyecto",
+    "whatsappMsgEn": "Hi%20Maikel%2C%20I'm%20interested%20in%20a%20project",
+    "copyright": "Creado por Maikel García"
+  },
+  "typewriter": {
+    "words": ["Python", "React", "Django", "Web Scraping", "Automatización"]
+  },
+  "typewriterEn": ["Python", "React", "Django", "Web Scraping", "Automation"]
+}

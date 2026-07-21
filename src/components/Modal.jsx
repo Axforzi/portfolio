@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL || 'https://formspree.io/f/mzdjlvgn';
 
 export default function Modal({ isOpen, closeModal, planName, planPrice }) {
   const [status, setStatus] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleEsc = (e) => { if (e.key === 'Escape') closeModal(); };
@@ -21,7 +23,7 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
 
   if (!isOpen) return null;
 
-  const priceDisplay = planPrice === 0 ? 'A convenir' : `$${planPrice}`;
+  const priceDisplay = planPrice === 0 ? t('modal.customPrice') : `$${planPrice}`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,12 +49,12 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
         setStatus('success');
       } else {
         const data = await res.json();
-        const msg = (data.errors && data.errors.map(err => err.message).join(', ')) || 'Error al enviar.';
+        const msg = (data.errors && data.errors.map(err => err.message).join(', ')) || t('modal.errorSend');
         setErrorMsg(msg);
         setStatus('error');
       }
     } catch {
-      setErrorMsg('Error de red. Verifica tu conexión e inténtalo de nuevo.');
+      setErrorMsg(t('modal.errorNetwork'));
       setStatus('error');
     }
   };
@@ -64,7 +66,7 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
   return (
     <div className="modal-overlay active" onClick={handleOverlayClick} role="dialog" aria-modal="true">
       <div className="modal-box glass-panel">
-        <button className="modal-close" onClick={closeModal} aria-label="Cerrar modal">&times;</button>
+        <button className="modal-close" onClick={closeModal} aria-label={t('modal.closeAria')}>&times;</button>
 
         {status !== 'success' ? (
           <>
@@ -72,27 +74,27 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
               <i className="fa-solid fa-code" aria-hidden="true"></i>
               <span>{planName}</span> &mdash; <strong>{priceDisplay}</strong>
             </div>
-            <h2>Iniciemos tu <span className="text-gradient">Proyecto</span></h2>
-            <p className="modal-subtitle">Llena estos datos y me comunicaré contigo en tiempo récord.</p>
+            <h2>{t('modal.startProject')}</h2>
+            <p className="modal-subtitle">{t('modal.subtitle')}</p>
 
             <form className="modal-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="field-name">Tu nombre / Empresa</label>
-                <input type="text" id="field-name" name="nombre" placeholder="Ej: Carlos Rodríguez" required />
+                <label htmlFor="field-name">{t('modal.nameLabel')}</label>
+                <input type="text" id="field-name" name="nombre" placeholder={t('modal.namePlaceholder')} required />
               </div>
               <div className="form-group">
-                <label htmlFor="field-email">Tu email</label>
-                <input type="email" id="field-email" name="email" placeholder="tu@email.com" required />
+                <label htmlFor="field-email">{t('modal.emailLabel')}</label>
+                <input type="email" id="field-email" name="email" placeholder={t('modal.emailPlaceholder')} required />
               </div>
               <div className="form-group">
-                <label htmlFor="field-description">Descripción detallada</label>
-                <textarea id="field-description" name="descripcion" placeholder="Coméntame qué necesitas solucionar o construir, referencias y plazos." required></textarea>
+                <label htmlFor="field-description">{t('modal.descLabel')}</label>
+                <textarea id="field-description" name="descripcion" placeholder={t('modal.descPlaceholder')} required></textarea>
               </div>
 
               {errorMsg && <p className="form-error">{errorMsg}</p>}
 
               <button type="submit" className="btn btn-primary btn-submit" disabled={status === 'submitting'}>
-                <span>{status === 'submitting' ? 'Enviando...' : 'Enviar detalles de inmediato'}</span>
+                <span>{status === 'submitting' ? t('modal.sending') : t('modal.submitBtn')}</span>
                 {status === 'submitting' && <i className="fa-solid fa-spinner fa-spin btn-submit-spinner"></i>}
               </button>
             </form>
@@ -100,17 +102,17 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
         ) : (
           <div className="modal-success active">
             <div className="success-icon"><i className="fa-solid fa-check"></i></div>
-            <h3 className="modal-success-title">¡Datos recibidos con éxito!</h3>
+            <h3 className="modal-success-title">{t('modal.successTitle')}</h3>
             <p className="modal-success-text">
-              Me comunicaré contigo desde <strong>garcia.maikelr@gmail.com</strong> en menos de <strong>24 horas</strong>.
+              {t('modal.successMsg1')} <strong>garcia.maikelr@gmail.com</strong> {t('modal.successMsg2')} <strong>24</strong> {t('modal.successMsg3')}.
             </p>
             <p className="modal-success-text">
-              Mientras tanto, ¿quieres ver mis trabajos anteriores?
+              {t('modal.successMsg4')}
             </p>
             <a href="/#/projects" className="btn btn-primary btn-close-full">
-              <i className="fa-solid fa-arrow-right"></i> Ver proyectos
+              <i className="fa-solid fa-arrow-right"></i> {t('modal.viewProjects')}
             </a>
-            <button className="btn btn-outline btn-close-full" onClick={closeModal}>Cerrar</button>
+            <button className="btn btn-outline btn-close-full" onClick={closeModal}>{t('modal.close')}</button>
           </div>
         )}
       </div>
