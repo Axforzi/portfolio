@@ -60,7 +60,7 @@ export default function Home() {
         <div className="intro">
           <h2>Sobre <span className="text-gradient">mí</span></h2>
           <div className="description glass-panel">
-            <img src="/img/coding.svg" alt="coding illustration" />
+            <img src="./img/coding.svg" alt="coding illustration" />
             <p>
               Soy un Desarrollador Full-Stack autodidacta apasionado por construir aplicaciones web completas, funcionales y atractivas. Me especializo en crear soluciones sólidas, abarcando desde la lógica y bases de datos en el Backend (Python, Django) hasta interfaces de usuario dinámicas y modernas en el Frontend (React, JavaScript).
             </p>
@@ -78,22 +78,22 @@ export default function Home() {
           <li className="glass-panel">
             <span>Python & JavaScript</span>
             <div className="img-skills">
-              <img src="/img/logos/python-logo.png" alt="Python logo" />
-              <img src="/img/logos/javascript-logo.webp" alt="JavaScript logo" />
+              <img src="./img/logos/python-logo.png" alt="Python logo" />
+              <img src="./img/logos/javascript-logo.webp" alt="JavaScript logo" />
             </div>
           </li>
           <li className="glass-panel">
             <span>Flask & Django</span>
             <div className="img-skills">
-              <img src="/img/logos/django-logo.png" alt="Django logo" />
-              <img src="/img/logos/flask.svg" alt="Flask logo" className="img-invert" />
+              <img src="./img/logos/django-logo.png" alt="Django logo" />
+              <img src="./img/logos/flask.svg" alt="Flask logo" className="img-invert" />
             </div>
           </li>
           <li className="glass-panel">
             <span>Bases de Datos</span>
             <div className="img-skills">
-              <img src="/img/logos/mysql-logo.webp" alt="MySQL logo" />
-              <img src="/img/logos/mongodb-logo.png" alt="MongoDB logo" />
+              <img src="./img/logos/mysql-logo.webp" alt="MySQL logo" />
+              <img src="./img/logos/mongodb-logo.png" alt="MongoDB logo" />
             </div>
           </li>
         </ul>
