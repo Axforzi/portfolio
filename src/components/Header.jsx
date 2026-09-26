@@ -4,8 +4,10 @@ import { useTranslation } from 'react-i18next'
 export default function Header() {
   const { t, i18n } = useTranslation();
 
+  const currentLang = i18n.language?.substring(0, 2);
+
   const toggleLang = () => {
-    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    const newLang = currentLang === 'es' ? 'en' : 'es';
     i18n.changeLanguage(newLang);
     document.documentElement.lang = newLang;
   };
@@ -31,7 +33,7 @@ export default function Header() {
           </li>
           <li className="menu-element">
             <button onClick={toggleLang} className="lang-toggle" aria-label="Toggle language" style={{marginTop: 2, padding: "7px 12px"}}>
-              {i18n.language === 'es' ? '🇪🇸' : '🇬🇧'}
+              {currentLang === 'es' ? '🇪🇸' : '🇬🇧'}
             </button>
           </li>
         </ul>
