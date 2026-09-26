@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL || 'https://formspree.io/f/mzdjlvgn';
@@ -109,9 +110,9 @@ export default function Modal({ isOpen, closeModal, planName, planPrice }) {
             <p className="modal-success-text">
               {t('modal.successMsg4')}
             </p>
-            <a href="/#/projects" className="btn btn-primary btn-close-full">
+            <Link to="/projects" className="btn btn-primary btn-close-full">
               <i className="fa-solid fa-arrow-right"></i> {t('modal.viewProjects')}
-            </a>
+            </Link>
             <button className="btn btn-outline btn-close-full" onClick={closeModal}>{t('modal.close')}</button>
           </div>
         )}
