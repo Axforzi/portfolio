@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="contact">
         <h2>{t('footer.title')}</h2>
         <p className="contact-subtitle">{t('footer.subtitle')}</p>
-        <p><i className="fa-regular fa-envelope" aria-hidden="true"></i> garcia.maikelr@gmail.com</p>
-        <p><i className="fa-solid fa-phone" aria-hidden="true"></i> +58 4121641006</p>
+        <p><i className="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:garcia.maikelr@gmail.com">garcia.maikelr@gmail.com</a></p>
+        <p><i className="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+584121641006">+58 4121641006</a></p>
 
         <a
           href="https://wa.me/584121641006?text=Hola%20Maikel%2C%20me%20interesa%20un%20proyecto"
