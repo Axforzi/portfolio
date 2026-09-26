@@ -3,19 +3,19 @@
   <!-- These are real, directly loadable URLs. They only became true when the site
        moved off HashRouter; under a hash router every route collapsed to "/". -->
   <url>
-    <loc>https://axforzi.github.io/portfolio/</loc>
+        <loc>https://maikeldev.site/</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://axforzi.github.io/portfolio/projects</loc>
+        <loc>https://maikeldev.site/projects</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://axforzi.github.io/portfolio/services</loc>
+        <loc>https://maikeldev.site/services</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

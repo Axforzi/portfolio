@@ -8,18 +8,20 @@
     <script>
       // GitHub Pages has no rewrite rules: it serves this file, with a 404 status,
       // for any path that is not a real file on the branch. Without this, the SPA's
-      // deep links (/portfolio/projects) would be dead on a cold load.
+      // deep links (/projects) would be dead on a cold load.
       //
       // Stash the requested path, then bounce to the app root, which IS a real file.
       // src/main.jsx restores the path with history.replaceState before React Router
       // mounts, so the URL bar and the rendered route end up correct.
       //
-      // APP_ROOT must match `base` in vite.config.js. It is hardcoded rather than
-      // derived from location.pathname on purpose: the app root is the project
-      // subdirectory /portfolio/, not a filesystem root, so a dirname computation
-      // sends /portfolio to the domain root and a trailing slash to itself.
+      // APP_ROOT must match `base` in vite.config.js. It used to be '/portfolio/',
+      // the GitHub Pages project subdirectory, and is now '/' because maikeldev.site
+      // serves the app from the domain root. It stays hardcoded rather than derived
+      // from location.pathname: a dirname computation sends '/portfolio' to the
+      // domain root, which is wrong there but indistinguishable here, so deriving it
+      // would trade an explicit value for a subtle one.
       (function () {
-        var APP_ROOT = '/portfolio/'
+        var APP_ROOT = '/'
         var KEY = 'gh-pages:cold-link-path'
         var location = window.location
 

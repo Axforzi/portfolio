@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://axforzi.github.io/portfolio/sitemap.xml
+Sitemap: https://maikeldev.site/sitemap.xml
