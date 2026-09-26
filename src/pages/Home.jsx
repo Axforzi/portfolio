@@ -57,7 +57,7 @@ export default function Home() {
   }, []);
 
   const lang = i18n.language?.substring(0, 2) || 'es';
-  const cvFile = lang === 'en' ? './files/Maikel_Garcia_CV_EN.pdf' : './files/Maikel_Garcia_CV_ES.pdf';
+  const cvFile = `${import.meta.env.BASE_URL}files/${lang === 'en' ? 'Maikel_Garcia_CV_EN.pdf' : 'Maikel_Garcia_CV_ES.pdf'}`;
   const typewriterWords = lang === 'en' ? t('typewriterEn', { returnObjects: true }) : t('typewriter.words', { returnObjects: true });
 
   return (

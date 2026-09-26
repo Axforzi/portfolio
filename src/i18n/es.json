@@ -106,5 +106,10 @@
   "typewriter": {
     "words": ["Python", "React", "Django", "Web Scraping", "Automatización"]
   },
-  "typewriterEn": ["Python", "React", "Django", "Web Scraping", "Automation"]
+  "typewriterEn": ["Python", "React", "Django", "Web Scraping", "Automation"],
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La dirección que seguiste no existe. Puede que se haya movido o que el enlace sea incorrecto.",
+    "back": "Volver al inicio"
+  }
 }

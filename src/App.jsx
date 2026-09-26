@@ -9,6 +9,7 @@ import Modal from './components/Modal.jsx'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import Services from './pages/Services.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
   const location = useLocation();
@@ -45,6 +46,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services openModal={openModal} />} />
+          {/* Without this, an unmatched path renders an empty <main>. Now that real
+              URLs exist, a typo or a stale link can reach the router. */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
