@@ -162,7 +162,6 @@ img {
   cursor: pointer;
   transition: all var(--transition-normal);
   border: none;
-  outline: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   position: relative;
@@ -230,6 +229,11 @@ img {
 }
 
 /* Accessibility */
+.btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -727,4 +731,16 @@ section, .about, .welcome {
 .plan-bolt-icon {
   font-size: 0.8rem;
   margin-left: 5px;
+}
+
+/* Respect the user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

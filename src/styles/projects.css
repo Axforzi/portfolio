@@ -101,7 +101,6 @@
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  outline: none;
   display: flex;
   align-items: center;
   transition: color var(--transition-fast), background var(--transition-fast);
@@ -110,6 +109,11 @@
 .wp-list summary:hover {
   background: rgba(0, 242, 254, 0.05);
   color: var(--accent-primary);
+}
+
+.wp-list summary:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: -3px;
 }
 
 /* Custom dropdown arrow using summary marker */
