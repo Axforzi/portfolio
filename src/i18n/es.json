@@ -3,7 +3,9 @@
     "home": "INICIO",
     "projects": "PROYECTOS",
     "services": "SERVICIOS",
-    "ariaLabel": "Navegación principal"
+    "ariaLabel": "Navegación principal",
+    "toggleLanguage": "Cambiar idioma",
+    "skipToContent": "Saltar al contenido principal"
   },
   "hero": {
     "subtitle": "Construyo webs que hacen crecer tu negocio",

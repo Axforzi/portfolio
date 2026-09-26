@@ -23,4 +23,14 @@ i18n
     },
   });
 
+// The document language is owned here so it stays correct on initial
+// detector-driven resolution and on every later language change.
+const setDocumentLanguage = (lng) => {
+  const baseCode = String(lng || '').split('-')[0].toLowerCase();
+  document.documentElement.lang = baseCode === 'en' ? 'en' : 'es';
+};
+
+setDocumentLanguage(i18n.language);
+i18n.on('languageChanged', setDocumentLanguage);
+
 export default i18n;

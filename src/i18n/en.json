@@ -3,7 +3,9 @@
     "home": "HOME",
     "projects": "PROJECTS",
     "services": "SERVICES",
-    "ariaLabel": "Main navigation"
+    "ariaLabel": "Main navigation",
+    "toggleLanguage": "Toggle language",
+    "skipToContent": "Skip to main content"
   },
   "hero": {
     "subtitle": "I build websites that grow your business",

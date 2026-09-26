@@ -9,7 +9,6 @@ export default function Header() {
   const toggleLang = () => {
     const newLang = currentLang === 'es' ? 'en' : 'es';
     i18n.changeLanguage(newLang);
-    document.documentElement.lang = newLang;
   };
 
   return (
@@ -32,7 +31,7 @@ export default function Header() {
             </NavLink>
           </li>
           <li className="menu-element">
-            <button onClick={toggleLang} className="lang-toggle" aria-label="Toggle language" style={{marginTop: 2, padding: "7px 12px"}}>
+            <button onClick={toggleLang} className="lang-toggle" aria-label={t('nav.toggleLanguage')} style={{marginTop: 2, padding: "7px 12px"}}>
               {currentLang === 'es' ? '🇪🇸' : '🇬🇧'}
             </button>
           </li>
