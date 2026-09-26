@@ -30,7 +30,7 @@ export default function Services({ openModal }) {
                   {plan.suffix && <span className="suffix">{plan.suffix}</span>}
                 </div>
                 {plan.note && <p className="plan-note">{plan.note}</p>}
-                <ul className="plan-features" aria-label={t('services.plansTitle')}>
+                <ul className="plan-features">
                   {planFeatures.map((feature, i) => (
                     <li key={i}><i className="fa-solid fa-check" aria-hidden="true"></i> {feature}</li>
                   ))}
@@ -38,7 +38,7 @@ export default function Services({ openModal }) {
                 <button
                   className={`btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-select`}
                   onClick={() => openModal(planName, plan.price)}
-                  aria-label={t('services.choosePlan')}
+                  aria-label={`${planName} — ${t('services.choosePlan')}`}
                 >
                   {t('services.choosePlan')}
                   {plan.featured && <i className="fa-solid fa-bolt plan-bolt-icon"></i>}
@@ -60,17 +60,12 @@ export default function Services({ openModal }) {
               <article
                 key={service.id}
                 className="hourly-card"
-                role="button"
-                tabIndex="0"
-                onClick={() => openModal(service.modalName, 0)}
-                onKeyDown={(e) => { if (e.key === 'Enter') openModal(service.modalName, 0); }}
-                aria-label={t('services.request')}
               >
                 <div className="plan-icon" aria-hidden="true"><i className={service.icon}></i></div>
                 <h3>{serviceName}</h3>
                 <p>{serviceDesc}</p>
                 <span className="hourly-price">{servicePrice}</span>
-                <button className="btn btn-outline btn-select">{t('services.request')}</button>
+                <button className="btn btn-outline btn-select" onClick={() => openModal(service.modalName, 0)}>{t('services.request')}</button>
               </article>
             );
           })}
