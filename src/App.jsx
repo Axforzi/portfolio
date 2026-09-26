@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -11,6 +12,7 @@ import Services from './pages/Services.jsx'
 
 function App() {
   const location = useLocation();
+  const { t } = useTranslation();
   const [modalData, setModalData] = useState({ isOpen: false, planName: '', planPrice: 0 });
 
   useEffect(() => {
@@ -34,9 +36,11 @@ function App() {
       <div className="ambient-glow-1"></div>
       <div className="ambient-glow-2"></div>
       
+      <a className="skip-link" href="#main-content">{t('nav.skipToContent')}</a>
+
       <Header />
       
-      <main id="main-content" className={mainClass}>
+      <main id="main-content" className={mainClass} tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
