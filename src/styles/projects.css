@@ -1,13 +1,31 @@
 /* Projects Specific Styles */
 
-.projects-main h1 {
+/* The centering lives on the PARENT, not on the h1, and that is load-bearing.
+   The h1 carries .text-gradient, which is display: inline-block, so it
+   shrink-wraps its own text and a text-align: center applied to itself is a
+   no-op -- there is no slack inside the box to distribute. Only a parent's
+   text-align centers an inline-level box. The previous rule put
+   text-align: center here and the title rendered flush left while looking
+   like it was styled. Mirrors .services-hero so the two inner pages match. */
+.projects-hero {
   text-align: center;
+  padding: 4rem 1.5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects-hero h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   letter-spacing: -0.03em;
   text-shadow: var(--shadow-glow);
   color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.projects-hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
 
 .wordpress-projects {

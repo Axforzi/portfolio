@@ -7,7 +7,10 @@ export default function Projects() {
 
   return (
     <>
-      <h1 className="text-gradient" style={{paddingTop: 60}}>{t('projectsPage.title')}</h1>
+      <section className="projects-hero">
+        <h1 className="text-gradient">{t('projectsPage.title')}</h1>
+        <p>{t('projectsPage.subtitle')}</p>
+      </section>
 
       <div className="container-projects">
         {allProjects.map((project) => (

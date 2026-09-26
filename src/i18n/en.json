@@ -51,7 +51,8 @@
     "seeAll": "View all projects"
   },
   "projectsPage": {
-    "title": "PROJECTS & CASE STUDIES",
+    "title": "Projects",
+    "subtitle": "Case studies",
     "caseStudyLabel": "Case Study: Corporate Digitalization (Kit Digital Spain)",
     "metric1": "Websites delivered to production",
     "metric2": "Average Core Web Vitals score",

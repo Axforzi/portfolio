@@ -51,7 +51,8 @@
     "seeAll": "Ver todos los proyectos"
   },
   "projectsPage": {
-    "title": "PROYECTOS & CASOS DE ESTUDIO",
+    "title": "Proyectos",
+    "subtitle": "Casos de estudio",
     "caseStudyLabel": "Caso de Estudio: Digitalización Empresarial (Kit Digital España)",
     "metric1": "Webs entregadas en producción",
     "metric2": "Puntuación Core Web Vitals",
