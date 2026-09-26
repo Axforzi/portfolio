@@ -28,6 +28,14 @@
   margin-bottom: 1.5rem;
 }
 
+/* The grid carries its own horizontal gutter now that <main> no longer does.
+   Scoped to .projects-main on purpose: Home reuses .container-projects inside
+   a .projects.container that already supplies the gutter, and an unscoped rule
+   would double it there. Mirrors .plans-section. */
+.projects-main .container-projects {
+  padding: 0 1.5rem;
+}
+
 .wordpress-projects {
   margin-top: 5rem;
   max-width: 800px;

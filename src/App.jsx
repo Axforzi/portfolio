@@ -29,8 +29,14 @@ function App() {
   };
 
   // Determine class for main based on route
-  const mainClass = location.pathname === '/projects' ? 'projects-main container' : 
-                    location.pathname === '/services' ? 'services-main' : '';
+    // 'container' is deliberately absent here. Its `padding: 0 1.5rem`
+    // shorthand has specificity (0,1,0) and outranks `main { padding-top: 80px }`
+    // at (0,0,1), so putting both on the same element silently zeroed the
+    // fixed-header clearance and the page title tucked under the header.
+    // Horizontal gutters are owned by .projects-hero and .container-projects
+    // instead, exactly as .services-hero and .plans-section own theirs.
+    const mainClass = location.pathname === '/projects' ? 'projects-main' : 
+                      location.pathname === '/services' ? 'services-main' : '';
 
   return (
     <>
