@@ -234,18 +234,41 @@ img {
   outline-offset: 3px;
 }
 
+/* Parked as a 1x1px clipped box rather than nudged off-screen with a negative
+   top. The old `top: -40px` only worked while the link stayed shorter than 40px,
+   and it does not: 16px * line-height 1.6 + 16px padding = 41.6px tall, so 1.6px
+   of the cyan background sat above the top edge as a permanent blue sliver. It
+   also broke harder for any longer translation, which wraps and pokes through
+   further. Clipping cannot leak: no font metric, language or wrap can make a 1x1px
+   clipped box visible.
+   clip-path keeps the element in the tab order, which display:none or
+   visibility:hidden would not, and that is the entire purpose of a skip link. */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 0;
   left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 8px;
+  overflow: visible;
+  clip-path: none;
   background: var(--accent-primary);
   color: var(--bg-dark);
-  padding: 8px;
+  /* The header is fixed at z-index 1000, so this has to outrank it to be seen. */
   z-index: 9999;
   font-weight: bold;
-}
-.skip-link:focus {
-  top: 0;
 }
 
 /* Main Layout Padding to account for fixed header */
