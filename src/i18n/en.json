@@ -14,8 +14,8 @@
   "about": {
     "title": "About me",
     "alt": "coding illustration",
-    "bio1": "I'm a self-taught Full-Stack Developer passionate about building complete, functional, and attractive web applications. I specialize in creating solid solutions, covering everything from backend logic and databases (Python, Django) to dynamic and modern user interfaces on the frontend (React, JavaScript).",
-    "bio2": "My ability to master both areas allows me to have a holistic view of every project, focusing on both UX/UI and architecture and scalability. I also have extensive experience in data optimization, Web Scraping, and solving complex technical requirements."
+    "bio1": "I am a Full-Stack Developer and Automation Specialist focused on building scalable web applications and software tools that drive tangible business results. My expertise spans backend architecture, databases (PostgreSQL, MongoDB), and REST/GraphQL APIs (Python, Django, Flask) to modern, fast, and interactive frontend interfaces (React, JavaScript, HTMX).",
+    "bio2": "My approach combines high-standard software engineering, user-centered design, and process automation (Web Scraping, bots, and AI integrations). With over 200 commercial projects delivered to production, I help businesses optimize their operations, accelerate turnaround, and scale with confidence."
   },
   "skills": {
     "title": "Technical",
@@ -23,13 +23,15 @@
     "databases": "Databases"
   },
   "stats": {
-    "heading": "My work speaks for itself",
-    "sitesDelivered": "Websites delivered",
-    "sitesDesc": "Built for businesses through the Kit Digital program in Spain.",
-    "publicProjects": "Public projects",
-    "projectsDesc": "Web applications, bots, and open-source tools available on GitHub.",
-    "techMastered": "Technologies mastered",
-    "techDesc": "Python, React, Django, Flask, Web Scraping, and databases."
+    "heading": "Proven Impact & Business Results",
+    "sitesDelivered": "Websites Delivered",
+    "sitesDesc": "Commercial projects built for businesses across Spain via the Kit Digital program.",
+    "fastDelivery": "Response & Turnaround",
+    "fastDeliveryDesc": "Initial assessment, transparent pricing, and direct communication with no middlemen.",
+    "performance": "Core Web Vitals & Speed",
+    "performanceDesc": "Optimized architectures ensuring lightning-fast load times, SEO, and high conversion.",
+    "automation": "Clean & Automated Code",
+    "automationDesc": "Data scraping pipelines, custom bots, and microservices eliminating manual busywork."
   },
   "howItWorks": {
     "title": "How it works",
@@ -47,11 +49,15 @@
     "seeAll": "View all projects"
   },
   "projectsPage": {
-    "title": "PROJECTS",
-    "wpSummary": "Other Projects (WordPress) — Work at Clinmedia",
-    "wpDesc1": "These are some of the websites built in WordPress during my time at Clinmedia as part of the",
+    "title": "PROJECTS & CASE STUDIES",
+    "caseStudyLabel": "Case Study: Corporate Digitalization (Kit Digital Spain)",
+    "metric1": "Websites delivered to production",
+    "metric2": "Average Core Web Vitals score",
+    "metric3": "Average project delivery time",
+    "wpSummary": "View Corporate Delivered Websites (WordPress / Clinmedia)",
+    "wpDesc1": "Actively participated in the layout, development, and deployment of over 200 commercial websites for businesses in Spain under the",
     "wpKitDigital": "Kit Digital program in Spain",
-    "wpDesc2": ". Demonstrating my versatility as a Full-Stack developer, I successfully worked on layout, UI design, implementation, and maintenance of the following websites:"
+    "wpDesc2": ". Every delivery focused on page speed, high-fidelity responsive design, local SEO, and rigorous compliance with government standards. Selected examples include:"
   },
   "services": {
     "title": "Freelance Services",

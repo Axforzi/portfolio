@@ -5,21 +5,31 @@ import Typewriter from '../components/Typewriter';
 import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import { featuredProjects } from '../data/projects';
+import '../utils/particles';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const initTimer = setTimeout(() => {
-      if (window.particlesJS) {
-        window.particlesJS({
+      const container = document.getElementById('particles-js');
+      if (container && window.particlesJS) {
+        // Clear any previous instances
+        if (window.pJSDom && window.pJSDom.length > 0) {
+          window.pJSDom = [];
+        }
+        // Remove any existing canvas
+        const existingCanvas = container.querySelectorAll('canvas');
+        existingCanvas.forEach(c => c.remove());
+
+        window.particlesJS('particles-js', {
           particles: {
-            number: { value: 60, density: { enable: true, value_area: 800 } },
+            number: { value: 65, density: { enable: true, value_area: 800 } },
             color: { value: "#00f2fe" },
             shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-            opacity: { value: 0.3, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-            size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
-            line_linked: { enable: true, distance: 150, color: "#4facfe", opacity: 0.2, width: 1 },
+            opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false } },
+            size: { value: 3.5, random: true, anim: { enable: true, speed: 2, size_min: 0.2, sync: false } },
+            line_linked: { enable: true, distance: 150, color: "#00f2fe", opacity: 0.35, width: 1.2 },
             move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
           },
           interactivity: {
@@ -30,9 +40,20 @@ export default function Home() {
           retina_detect: true
         });
       }
-    }, 100);
+    }, 300);
 
-    return () => clearTimeout(initTimer);
+    return () => {
+      clearTimeout(initTimer);
+      if (window.pJSDom && window.pJSDom.length > 0) {
+        for (let i = 0; i < window.pJSDom.length; i++) {
+          const dom = window.pJSDom[i];
+          if (dom?.pJS?.fn?.drawAnimFrame) {
+            cancelAnimationFrame(dom.pJS.fn.drawAnimFrame);
+          }
+        }
+        window.pJSDom = [];
+      }
+    };
   }, []);
 
   const lang = i18n.language?.substring(0, 2) || 'es';

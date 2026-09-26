@@ -17,6 +17,74 @@
   margin-right: auto;
 }
 
+.case-study-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.case-study-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: var(--accent-primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.case-study-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cs-metric-card {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  transition: all var(--transition-normal);
+}
+
+.cs-metric-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.cs-metric-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.3rem;
+}
+
+.cs-metric-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .case-study-metrics {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
 .wp-list {
   background: var(--bg-card);
   backdrop-filter: blur(10px);

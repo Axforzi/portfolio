@@ -11,16 +11,22 @@ export default function Testimonials() {
       descKey: 'stats.sitesDesc',
     },
     {
-      icon: 'fa-brands fa-github',
-      number: '5+',
-      titleKey: 'stats.publicProjects',
-      descKey: 'stats.projectsDesc',
+      icon: 'fa-solid fa-bolt',
+      number: '< 24h',
+      titleKey: 'stats.fastDelivery',
+      descKey: 'stats.fastDeliveryDesc',
     },
     {
-      icon: 'fa-solid fa-code',
-      number: '+5',
-      titleKey: 'stats.techMastered',
-      descKey: 'stats.techDesc',
+      icon: 'fa-solid fa-gauge-high',
+      number: '95+',
+      titleKey: 'stats.performance',
+      descKey: 'stats.performanceDesc',
+    },
+    {
+      icon: 'fa-solid fa-gears',
+      number: '100%',
+      titleKey: 'stats.automation',
+      descKey: 'stats.automationDesc',
     },
   ];
 

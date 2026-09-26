@@ -14,8 +14,8 @@
   "about": {
     "title": "Sobre mí",
     "alt": "coding illustration",
-    "bio1": "Soy un Desarrollador Full-Stack autodidacta apasionado por construir aplicaciones web completas, funcionales y atractivas. Me especializo en crear soluciones sólidas, abarcando desde la lógica y bases de datos en el Backend (Python, Django) hasta interfaces de usuario dinámicas y modernas en el Frontend (React, JavaScript).",
-    "bio2": "Mi capacidad para dominar ambas áreas me permite tener una visión integral de cada desarrollo, centrándome tanto en la UX/UI como en la arquitectura y escalabilidad. Además, cuento con gran experiencia en optimización de datos, Web Scraping y resolución de requerimientos técnicos complejos."
+    "bio1": "Soy un Desarrollador Full-Stack y Especialista en Automatización enfocado en construir aplicaciones web escalables y herramientas de software que generan resultados de negocio tangibles. Abarco desde la arquitectura backend, bases de datos (PostgreSQL, MongoDB) y APIs REST/GraphQL (Python, Django, Flask) hasta interfaces frontend modernas, rápidas e interactivas (React, JavaScript, HTMX).",
+    "bio2": "Mi enfoque combina ingeniería de software sólida, diseño centrado en el usuario (UX/UI) y automatización de procesos (Web Scraping, bots e integraciones de IA). Con más de 200 proyectos comerciales entregados en producción, ayudo a empresas a optimizar sus operaciones, aumentar su velocidad y escalar con confianza."
   },
   "skills": {
     "title": "Habilidades",
@@ -23,13 +23,15 @@
     "databases": "Bases de Datos"
   },
   "stats": {
-    "heading": "Mi trabajo habla por mí",
+    "heading": "Impacto y Resultados Comprobados",
     "sitesDelivered": "Sitios web entregados",
-    "sitesDesc": "Desarrollados para empresas y negocios a través del programa Kit Digital en España.",
-    "publicProjects": "Proyectos públicos",
-    "projectsDesc": "Aplicaciones web, bots y herramientas open-source disponibles en GitHub.",
-    "techMastered": "Tecnologías dominadas",
-    "techDesc": "Python, React, Django, Flask, Web Scraping y bases de datos."
+    "sitesDesc": "Proyectos comerciales desarrollados para pymes y empresas a través del programa Kit Digital en España.",
+    "fastDelivery": "Tiempo de respuesta",
+    "fastDeliveryDesc": "Diagnóstico inicial, presupuesto claro y comunicación directa sin intermediarios.",
+    "performance": "Core Web Vitals & Speed",
+    "performanceDesc": "Arquitecturas optimizadas para carga ultrarrápida, alta conversión y experiencia fluida.",
+    "automation": "Código Limpio & Automatizado",
+    "automationDesc": "Pipelines de datos, bots y microservicios a medida que eliminan horas de tareas manuales."
   },
   "howItWorks": {
     "title": "Cómo funciona",
@@ -47,11 +49,15 @@
     "seeAll": "Ver todos los proyectos"
   },
   "projectsPage": {
-    "title": "PROYECTOS",
-    "wpSummary": "Otros Proyectos (WordPress) — Trabajos en Clinmedia",
-    "wpDesc1": "Estos son algunos de los sitios web realizados en WordPress durante mi participación en Clinmedia como parte del programa",
+    "title": "PROYECTOS & CASOS DE ESTUDIO",
+    "caseStudyLabel": "Caso de Estudio: Digitalización Empresarial (Kit Digital España)",
+    "metric1": "Webs entregadas en producción",
+    "metric2": "Puntuación Core Web Vitals",
+    "metric3": "Plazo promedio de entrega",
+    "wpSummary": "Ver Sitios Web Corporativos Entregados (WordPress / Clinmedia)",
+    "wpDesc1": "Participé activamente en el diseño UI, desarrollo e implementación de más de 200 sitios web comerciales para empresas en España bajo el programa",
     "wpKitDigital": "Kit Digital en España",
-    "wpDesc2": ". Demostrando mi versatilidad como desarrollador Full-Stack, trabajé exitosamente en el maquetado, diseño UI, implementación y mantenimiento de los siguientes corporativos:"
+    "wpDesc2": ". Cada desarrollo se enfocó en velocidad de carga, diseño responsive, SEO local y cumplimiento estricto de estándares. Algunos de los corporativos entregados:"
   },
   "services": {
     "title": "Servicios Freelance",

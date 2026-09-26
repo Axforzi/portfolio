@@ -1,26 +1,35 @@
 export const featuredProjects = [
   {
+    id: 'soundPlus',
+    title: 'SoundPlus',
+    description: 'Aplicación web full-stack de streaming musical construida en Django, HTMX, PostgreSQL, almacenamiento Cloudflare R2 (S3) y entorno Dockerizado.',
+    descriptionEn: 'Full-stack music streaming web application built with Django, HTMX, PostgreSQL, Cloudflare R2 (S3) storage, and Docker.',
+    image: './img/soundPlust_logo.png',
+    imageAlt: 'SoundPlus preview',
+    url: 'https://github.com/Axforzi/soundPlus',
+  },
+  {
     id: 'fromJapan',
     title: 'fromJapan',
-    description: 'Sitio web creado en Flask para la búsqueda de anime, mangas y novelas ligeras.',
-    descriptionEn: 'Website built with Flask for searching anime, manga, and light novels.',
+    description: 'Catálogo full-stack de entretenimiento japonés: anime, manga y novelas ligeras, con búsqueda, filtros y panel de administración (Flask + MongoDB + AniList).',
+    descriptionEn: 'Full-stack catalog of Japanese entertainment — anime, manga and light novels — with search, filters and an admin panel (Flask + MongoDB + AniList).',
     image: './img/fromJapan.png',
     imageAlt: 'fromJapan preview',
     url: 'https://github.com/Axforzi/fromJapan',
-  },
-  {
-    id: 'telegramBot',
-    title: 'Telegram Bot',
-    description: 'Bot de Telegram que permite descargar videos y audios de YouTube rápidamente.',
-    descriptionEn: 'Telegram bot that lets you quickly download YouTube videos and audio.',
-    image: './img/telegramBot_logo.png',
-    imageAlt: 'Telegram Bot logo',
-    url: 'https://github.com/Axforzi/telegramBot',
   },
 ];
 
 export const allProjects = [
   ...featuredProjects,
+  {
+    id: 'flowGemini',
+    title: 'Flow Gemini Assistant',
+    description: 'Plugin para Flow Launcher que integra la API de Google Gemini para consultas de IA ultrarrápidas, soporte multi-modelo y multi-idioma.',
+    descriptionEn: 'Flow Launcher plugin integrating Google\'s Gemini API for lightning-fast AI queries, multi-model selection, and multilingual support.',
+    image: './img/coding.svg',
+    imageAlt: 'Flow Gemini Assistant logo',
+    url: 'https://github.com/Axforzi/flow-gemini-assistant',
+  },
   {
     id: 'novelScraper',
     title: 'Scraper de novelas',
@@ -40,13 +49,13 @@ export const allProjects = [
     url: 'https://github.com/Axforzi/gameScraper',
   },
   {
-    id: 'soundPlus',
-    title: 'Spotify Copy',
-    description: 'Sitio web clon de interfaz y funcionalidades básicas inspiradas en Spotify para reproducción musical.',
-    descriptionEn: 'Website clone with UI and basic features inspired by Spotify for music playback.',
-    image: './img/soundPlust_logo.png',
-    imageAlt: 'soundPlus logo',
-    url: 'https://github.com/Axforzi/soundPlus',
+    id: 'telegramBot',
+    title: 'Telegram Bot',
+    description: 'Bot de Telegram que permite descargar videos y audios de YouTube rápidamente.',
+    descriptionEn: 'Telegram bot that lets you quickly download YouTube videos and audio.',
+    image: './img/telegramBot_logo.png',
+    imageAlt: 'Telegram Bot logo',
+    url: 'https://github.com/Axforzi/telegramBot',
   },
 ];
 

@@ -30,6 +30,27 @@ export default function Projects() {
       </div>
 
       <section className="wordpress-projects">
+        <div className="case-study-header">
+          <span className="case-study-tag">
+            <i className="fa-solid fa-chart-line" aria-hidden="true"></i> {t('projectsPage.caseStudyLabel')}
+          </span>
+        </div>
+
+        <div className="case-study-metrics">
+          <div className="cs-metric-card glass-panel">
+            <span className="cs-metric-num">200+</span>
+            <span className="cs-metric-label">{t('projectsPage.metric1')}</span>
+          </div>
+          <div className="cs-metric-card glass-panel">
+            <span className="cs-metric-num">95+</span>
+            <span className="cs-metric-label">{t('projectsPage.metric2')}</span>
+          </div>
+          <div className="cs-metric-card glass-panel">
+            <span className="cs-metric-num">&lt; 15d</span>
+            <span className="cs-metric-label">{t('projectsPage.metric3')}</span>
+          </div>
+        </div>
+
         <details className="wp-list">
           <summary>{t('projectsPage.wpSummary')}</summary>
           <div className="wp-content">
