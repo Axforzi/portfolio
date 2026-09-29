@@ -49,17 +49,26 @@ footer::before {
   font-size: 1.2rem;
 }
 
-.contact a {
+/* Scoped to the text links in a paragraph, not to every anchor in .contact.
+
+   The WhatsApp button is a direct child of .contact, and this unscoped
+   rule scored (0,1,1) against .btn-whatsapp's (0,1,0) — class counts tie,
+   the element count decided it, so it governed the button too. Its
+   `transition: color ...` overrode the button's `transition: all ...`,
+   leaving background, transform and box-shadow to snap instantly while the
+   one property that did animate was white in both states.
+
+   The global `a` rule already declares the same colour transition, so the
+   text links lose nothing by dropping the unscoped selector. */
+.contact p a {
   color: inherit;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-/* Scoped to the text links in a paragraph, not to every anchor in .contact.
-   The WhatsApp button is a direct child of .contact, and an unscoped
-   ".contact a:hover" scored (0,2,1) against .btn-whatsapp:hover's (0,2,0) —
-   it won on the element count and repainted the button as a cyan underlined
-   link, so its own hover never showed. */
+/* Same scoping for the hover. Without it .contact a:hover scored (0,2,1)
+   against .btn-whatsapp:hover's (0,2,0), won on the element count, and
+   repainted the button as a cyan underlined link. */
 .contact p a:hover,
 .contact p a:focus-visible {
   color: var(--accent-primary);
