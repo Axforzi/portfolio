@@ -7,6 +7,7 @@ export const featuredProjects = [
     image: './img/soundPlust_logo.png',
     imageAlt: 'SoundPlus preview',
     url: 'https://github.com/Axforzi/soundPlus',
+    demo: 'https://soundplus.maikeldev.site',
   },
   {
     id: 'fromJapan',
@@ -16,6 +17,7 @@ export const featuredProjects = [
     image: './img/fromJapan.png',
     imageAlt: 'fromJapan preview',
     url: 'https://github.com/Axforzi/fromJapan',
+    demo: 'https://fromjapan.maikeldev.site',
   },
 ];
 
@@ -35,7 +37,7 @@ export const allProjects = [
     title: 'Scraper de novelas',
     description: 'Script automatizado para extraer novelas web y convertirlas en formato EPUB o PDF.',
     descriptionEn: 'Automated script to extract web novels and convert them to EPUB or PDF format.',
-    image: './img/novelScraper - logo.png',
+    image: './img/novelScraper-logo.png',
     imageAlt: 'novelScraper logo',
     url: 'https://github.com/Axforzi/novelScraper',
   },
@@ -47,6 +49,7 @@ export const allProjects = [
     image: './img/mando.png',
     imageAlt: 'gameScraper logo',
     url: 'https://github.com/Axforzi/gameScraper',
+    demo: 'https://gamescraper.maikeldev.site',
   },
   {
     id: 'telegramBot',
@@ -56,6 +59,15 @@ export const allProjects = [
     image: './img/telegramBot_logo.png',
     imageAlt: 'Telegram Bot logo',
     url: 'https://github.com/Axforzi/telegramBot',
+  },
+  {
+    id: 'mangoverlay',
+    title: 'mangoverlay',
+    description: 'Overlay dentro del juego para generación de frames sin pérdida en Linux (Vulkan), construido como fork de MangoHud e integrando la capa lsfg-vk en un único menú controlado con gamepad.',
+    descriptionEn: 'In-game overlay for lossless frame generation on Linux (Vulkan), built as a fork of MangoHud that folds the lsfg-vk frame generation layer into a single gamepad-driven menu.',
+    image: './img/mangoverlay-logo.png',
+    imageAlt: 'mangoverlay logo',
+    url: 'https://github.com/Axforzi/mangoverlay',
   },
 ];
 

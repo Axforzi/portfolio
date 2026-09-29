@@ -31,7 +31,7 @@ export default function Header() {
             </NavLink>
           </li>
           <li className="menu-element">
-            <button onClick={toggleLang} className="lang-toggle" aria-label={t('nav.toggleLanguage')} style={{marginTop: 2, padding: "7px 12px"}}>
+            <button onClick={toggleLang} className="lang-toggle" aria-label={t('nav.toggleLanguage')}>
               {currentLang === 'es' ? '🇪🇸' : '🇬🇧'}
             </button>
           </li>

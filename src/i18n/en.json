@@ -53,6 +53,8 @@
   "projectsPage": {
     "title": "Projects",
     "subtitle": "Case studies",
+    "viewRepo": "View repo",
+    "visitSite": "Visit site",
     "caseStudyLabel": "Case Study: Corporate Digitalization (Kit Digital Spain)",
     "metric1": "Websites delivered to production",
     "metric2": "Average Core Web Vitals score",
@@ -105,12 +107,29 @@
     "copyright": "Created by Maikel García"
   },
   "typewriter": {
-    "words": ["Python", "React", "Django", "Web Scraping", "Automatización"]
+    "words": ["Python", "React", "Django", "Web Scraping", "Automation"]
   },
-  "typewriterEn": ["Python", "React", "Django", "Web Scraping", "Automation"],
   "notFound": {
     "title": "Page not found",
     "body": "The address you followed does not exist. It may have moved, or the link may be wrong.",
     "back": "Back to home"
+  },
+  "meta": {
+    "home": {
+      "title": "Maikel García - Full-Stack Freelance Developer",
+      "description": "Maikel García — freelance Full-Stack Developer specialised in Python, React, web scraping and automation."
+    },
+    "projects": {
+      "title": "Projects - Maikel García",
+      "description": "Case studies and commercial web projects: WordPress deliveries under Spain's Kit Digital program, full-stack applications and automation tools."
+    },
+    "services": {
+      "title": "Freelance Services - Maikel García",
+      "description": "Web development plans from $100, plus web scraping, bots and custom automation. Clear pricing and delivery measured in days, not months."
+    },
+    "notFound": {
+      "title": "Page not found - Maikel García",
+      "description": "The page you are looking for does not exist. Go back to the homepage or browse the projects and freelance services."
+    }
   }
 }

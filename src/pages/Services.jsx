@@ -19,6 +19,7 @@ export default function Services({ openModal }) {
           {webPlans.map((plan) => {
             const planName = lang === 'en' ? plan.nameEn : plan.name;
             const planFeatures = lang === 'en' ? plan.featuresEn : plan.features;
+            const planNote = lang === 'en' ? plan.noteEn : plan.note;
             return (
               <article key={plan.id} className={`plan-card${plan.featured ? ' featured' : ''}`}>
                 {plan.badge && <span className="plan-badge">{plan.badge}</span>}
@@ -29,7 +30,7 @@ export default function Services({ openModal }) {
                   <span className="amount">{plan.price}</span>
                   {plan.suffix && <span className="suffix">{plan.suffix}</span>}
                 </div>
-                {plan.note && <p className="plan-note">{plan.note}</p>}
+                {planNote && <p className="plan-note">{planNote}</p>}
                 <ul className="plan-features">
                   {planFeatures.map((feature, i) => (
                     <li key={i}><i className="fa-solid fa-check" aria-hidden="true"></i> {feature}</li>

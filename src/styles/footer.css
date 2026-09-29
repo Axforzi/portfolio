@@ -49,14 +49,28 @@ footer::before {
   font-size: 1.2rem;
 }
 
-.contact a {
+/* Scoped to the text links in a paragraph, not to every anchor in .contact.
+
+   The WhatsApp button is a direct child of .contact, and this unscoped
+   rule scored (0,1,1) against .btn-whatsapp's (0,1,0) — class counts tie,
+   the element count decided it, so it governed the button too. Its
+   `transition: color ...` overrode the button's `transition: all ...`,
+   leaving background, transform and box-shadow to snap instantly while the
+   one property that did animate was white in both states.
+
+   The global `a` rule already declares the same colour transition, so the
+   text links lose nothing by dropping the unscoped selector. */
+.contact p a {
   color: inherit;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.contact a:hover,
-.contact a:focus-visible {
+/* Same scoping for the hover. Without it .contact a:hover scored (0,2,1)
+   against .btn-whatsapp:hover's (0,2,0), won on the element count, and
+   repainted the button as a cyan underlined link. */
+.contact p a:hover,
+.contact p a:focus-visible {
   color: var(--accent-primary);
   text-decoration: underline;
 }
@@ -66,12 +80,17 @@ footer::before {
   margin-bottom: 1.5rem;
 }
 
+/* #1fad54 was previously an inline style on the element, which outranked every
+   stylesheet rule including :hover. That silently killed three greens the author
+   had written: this base colour, a lighter #25d366 underneath it, and the
+   #1da851 hover below. Restoring the hover means this button now has the
+   darker-on-hover affordance that was always intended but never rendered. */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.8rem 2rem;
-  background: #25d366;
+  background: #1fad54;
   color: #fff;
   border-radius: 30px;
   font-family: var(--font-heading);
@@ -82,9 +101,12 @@ footer::before {
   margin-bottom: 0.5rem;
 }
 .btn-whatsapp:hover {
+  /* #1da851 was the author's original hover and had never rendered. The glow is
+     the same green as rgba(37, 211, 102), which was the base colour that the
+     inline style also hid — it no longer matches anything visible. */
   background: #1da851;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 25px rgba(29, 168, 81, 0.4);
   color: #fff;
 }
 .btn-whatsapp i {

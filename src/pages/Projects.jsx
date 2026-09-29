@@ -14,21 +14,34 @@ export default function Projects() {
 
       <div className="container-projects">
         {allProjects.map((project) => (
-          <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
-            <div className="project glass-panel">
-              <div className="container-img">
-                <img
-                  src={project.image}
-                  alt={project.imageAlt}
-                  style={project.imageInvert ? { filter: 'brightness(0) invert(1)' } : undefined}
-                />
-              </div>
-              <div className="text">
-                <h2>{project.title}</h2>
-                <p>{lang === 'en' ? project.descriptionEn : project.description}</p>
+          <article key={project.id} className="project glass-panel">
+            <div className="container-img">
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="text">
+              <h2>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a>
+              </h2>
+              <p>{lang === 'en' ? project.descriptionEn : project.description}</p>
+              <div className="project-actions">
+                <a className="project-action" href={project.url} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-github" aria-hidden="true"></i>
+                  {t('projectsPage.viewRepo')}
+                </a>
+                {project.demo && (
+                  <a className="project-action project-action-demo" href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    {t('projectsPage.visitSite')}
+                  </a>
+                )}
               </div>
             </div>
-          </a>
+          </article>
         ))}
       </div>
 
