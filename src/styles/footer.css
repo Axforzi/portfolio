@@ -55,8 +55,13 @@ footer::before {
   transition: color var(--transition-fast);
 }
 
-.contact a:hover,
-.contact a:focus-visible {
+/* Scoped to the text links in a paragraph, not to every anchor in .contact.
+   The WhatsApp button is a direct child of .contact, and an unscoped
+   ".contact a:hover" scored (0,2,1) against .btn-whatsapp:hover's (0,2,0) —
+   it won on the element count and repainted the button as a cyan underlined
+   link, so its own hover never showed. */
+.contact p a:hover,
+.contact p a:focus-visible {
   color: var(--accent-primary);
   text-decoration: underline;
 }
