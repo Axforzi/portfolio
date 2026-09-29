@@ -60,6 +60,15 @@ export const allProjects = [
     imageAlt: 'Telegram Bot logo',
     url: 'https://github.com/Axforzi/telegramBot',
   },
+  {
+    id: 'mangoverlay',
+    title: 'mangoverlay',
+    description: 'Overlay dentro del juego para generación de frames sin pérdida en Linux (Vulkan), construido como fork de MangoHud e integrando la capa lsfg-vk en un único menú controlado con gamepad.',
+    descriptionEn: 'In-game overlay for lossless frame generation on Linux (Vulkan), built as a fork of MangoHud that folds the lsfg-vk frame generation layer into a single gamepad-driven menu.',
+    image: './img/mangoverlay-logo.png',
+    imageAlt: 'mangoverlay logo',
+    url: 'https://github.com/Axforzi/mangoverlay',
+  },
 ];
 
 export const wordpressSites = [
