@@ -1,7 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language?.substring(0, 2) || 'es';
+  const whatsappMsg = lang === 'en' ? t('footer.whatsappMsgEn') : t('footer.whatsappMsg');
 
   return (
     <footer>
@@ -12,12 +15,11 @@ export default function Footer() {
         <p><i className="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+584121641006">+58 4121641006</a></p>
 
         <a
-          href="https://wa.me/584121641006?text=Hola%20Maikel%2C%20me%20interesa%20un%20proyecto"
+          href={`https://wa.me/584121641006?text=${whatsappMsg}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-whatsapp"
           aria-label={t('footer.whatsappAria')}
-          style={{background: "#1fad54"}}
         >
           <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> {t('footer.whatsappBtn')}
         </a>

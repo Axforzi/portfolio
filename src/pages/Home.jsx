@@ -58,7 +58,7 @@ export default function Home() {
 
   const lang = i18n.language?.substring(0, 2) || 'es';
   const cvFile = `${import.meta.env.BASE_URL}files/${lang === 'en' ? 'Maikel_Garcia_CV_EN.pdf' : 'Maikel_Garcia_CV_ES.pdf'}`;
-  const typewriterWords = lang === 'en' ? t('typewriterEn', { returnObjects: true }) : t('typewriter.words', { returnObjects: true });
+  const typewriterWords = t('typewriter.words', { returnObjects: true });
 
   return (
     <>
@@ -87,7 +87,7 @@ export default function Home() {
         <div className="intro">
           <h2>{t('about.title').split(' ')[0]} <span className="text-gradient">{t('about.title').split(' ').slice(1).join(' ')}</span></h2>
           <div className="description glass-panel">
-            <img src="./img/coding.svg" alt={t('about.alt')} />
+            <img src="./img/coding.svg" alt={t('about.alt')} loading="lazy" decoding="async" />
             <p>{t('about.bio1')}</p>
             <p>{t('about.bio2')}</p>
             <div className="clearfix"></div>
@@ -101,22 +101,22 @@ export default function Home() {
           <li className="glass-panel">
             <span>Python & JavaScript</span>
             <div className="img-skills">
-              <img src="./img/logos/python-logo.png" alt="Python logo" />
-              <img src="./img/logos/javascript-logo.webp" alt="JavaScript logo" />
+              <img src="./img/logos/python-logo.png" alt="Python logo" loading="lazy" decoding="async" />
+              <img src="./img/logos/javascript-logo.webp" alt="JavaScript logo" loading="lazy" decoding="async" />
             </div>
           </li>
           <li className="glass-panel">
             <span>Flask & Django</span>
             <div className="img-skills">
-              <img src="./img/logos/django-logo.png" alt="Django logo" />
-              <img src="./img/logos/flask.svg" alt="Flask logo" className="img-invert" />
+              <img src="./img/logos/django-logo.png" alt="Django logo" loading="lazy" decoding="async" />
+              <img src="./img/logos/flask.svg" alt="Flask logo" className="img-invert" loading="lazy" decoding="async" />
             </div>
           </li>
           <li className="glass-panel">
             <span>{t('skills.databases')}</span>
             <div className="img-skills">
-              <img src="./img/logos/mysql-logo.webp" alt="MySQL logo" />
-              <img src="./img/logos/mongodb-logo.png" alt="MongoDB logo" />
+              <img src="./img/logos/mysql-logo.webp" alt="MySQL logo" loading="lazy" decoding="async" />
+              <img src="./img/logos/mongodb-logo.png" alt="MongoDB logo" loading="lazy" decoding="async" />
             </div>
           </li>
         </ul>
@@ -131,7 +131,7 @@ export default function Home() {
             <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
               <div className="project glass-panel">
                 <div className="container-img">
-                  <img src={project.image} alt={project.imageAlt} />
+                  <img src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" />
                 </div>
                 <div className="text">
                   <h2>{project.title}</h2>

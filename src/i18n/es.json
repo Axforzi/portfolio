@@ -15,7 +15,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "alt": "coding illustration",
+    "alt": "Ilustración de programación",
     "bio1": "Soy un Desarrollador Full-Stack y Especialista en Automatización enfocado en construir aplicaciones web escalables y herramientas de software que generan resultados de negocio tangibles. Abarco desde la arquitectura backend, bases de datos (PostgreSQL, MongoDB) y APIs REST/GraphQL (Python, Django, Flask) hasta interfaces frontend modernas, rápidas e interactivas (React, JavaScript, HTMX).",
     "bio2": "Mi enfoque combina ingeniería de software sólida, diseño centrado en el usuario (UX/UI) y automatización de procesos (Web Scraping, bots e integraciones de IA). Con más de 200 proyectos comerciales entregados en producción, ayudo a empresas a optimizar sus operaciones, aumentar su velocidad y escalar con confianza."
   },
@@ -107,10 +107,27 @@
   "typewriter": {
     "words": ["Python", "React", "Django", "Web Scraping", "Automatización"]
   },
-  "typewriterEn": ["Python", "React", "Django", "Web Scraping", "Automation"],
   "notFound": {
     "title": "Página no encontrada",
     "body": "La dirección que seguiste no existe. Puede que se haya movido o que el enlace sea incorrecto.",
     "back": "Volver al inicio"
+  },
+  "meta": {
+    "home": {
+      "title": "Maikel García - Desarrollador Full-Stack Freelance",
+      "description": "Maikel García — desarrollador Full-Stack freelance especializado en Python, React, web scraping y automatización."
+    },
+    "projects": {
+      "title": "Proyectos - Maikel García",
+      "description": "Casos de estudio y proyectos web comerciales: entregas WordPress del programa Kit Digital, aplicaciones full-stack y herramientas de automatización."
+    },
+    "services": {
+      "title": "Servicios Freelance - Maikel García",
+      "description": "Planes de desarrollo web desde $100, además de web scraping, bots y automatización a medida. Precios claros y entregas en días, no en meses."
+    },
+    "notFound": {
+      "title": "Página no encontrada - Maikel García",
+      "description": "La página que buscas no existe. Vuelve al inicio o explora los proyectos y los servicios freelance."
+    }
   }
 }

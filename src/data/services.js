@@ -51,6 +51,7 @@ export const webPlans = [
     suffix: '+',
     icon: 'fa-solid fa-code',
     note: 'Presupuesto ajustado según complejidad.',
+    noteEn: 'Quote adjusted to the project complexity.',
     features: [
       '8+ páginas o Web App tipo SaaS',
       'Autenticación de usuarios Segura',
