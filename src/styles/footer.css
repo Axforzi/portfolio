@@ -66,12 +66,16 @@ footer::before {
   margin-bottom: 1.5rem;
 }
 
+/* #1fad54 was previously an inline style on the element, which outranked every
+   stylesheet rule including :hover — so the hover tint below never actually
+   rendered. The value lives here now, and the dead hover background is gone so
+   the rendered colours stay byte-for-byte the same. */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.8rem 2rem;
-  background: #25d366;
+  background: #1fad54;
   color: #fff;
   border-radius: 30px;
   font-family: var(--font-heading);
@@ -82,7 +86,6 @@ footer::before {
   margin-bottom: 0.5rem;
 }
 .btn-whatsapp:hover {
-  background: #1da851;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   color: #fff;
