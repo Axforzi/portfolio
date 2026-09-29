@@ -7,6 +7,7 @@ export const featuredProjects = [
     image: './img/soundPlust_logo.png',
     imageAlt: 'SoundPlus preview',
     url: 'https://github.com/Axforzi/soundPlus',
+    demo: 'https://soundplus.maikeldev.site',
   },
   {
     id: 'fromJapan',
@@ -16,6 +17,7 @@ export const featuredProjects = [
     image: './img/fromJapan.png',
     imageAlt: 'fromJapan preview',
     url: 'https://github.com/Axforzi/fromJapan',
+    demo: 'https://fromjapan.maikeldev.site',
   },
 ];
 
@@ -47,6 +49,7 @@ export const allProjects = [
     image: './img/mando.png',
     imageAlt: 'gameScraper logo',
     url: 'https://github.com/Axforzi/gameScraper',
+    demo: 'https://gamescraper.maikeldev.site',
   },
   {
     id: 'telegramBot',

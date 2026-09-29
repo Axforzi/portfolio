@@ -53,6 +53,8 @@
   "projectsPage": {
     "title": "Projects",
     "subtitle": "Case studies",
+    "viewRepo": "View repo",
+    "visitSite": "Visit site",
     "caseStudyLabel": "Case Study: Corporate Digitalization (Kit Digital Spain)",
     "metric1": "Websites delivered to production",
     "metric2": "Average Core Web Vitals score",

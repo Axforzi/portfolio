@@ -715,6 +715,60 @@ section, .about, .welcome {
   line-height: 1.5;
 }
 
+/* The card is an <article> now, not one big anchor, so the title and the action
+   buttons are the click targets. */
+.project .text h2 a,
+.project .text h2 a:hover {
+  /* color: inherit is load-bearing, not cosmetic. The bare `a` rule above sets a
+     colour on the element itself, and any specified value on an element beats the
+     value it would otherwise inherit -- so the h2 colour never reaches the link.
+     Without this the title renders cyan at rest (from `a`, specificity 0,0,1) and
+     .project:hover .text h2 animates nothing. The :hover arm is here for the same
+     reason one level down: `a:hover` (0,1,1) would beat the inherited h2 colour
+     and flip the title to plain white only while the pointer sits on the letters. */
+  color: inherit;
+}
+
+/* margin-top: auto pins the row to the bottom of the .text flex column. Without
+   it, cards whose descriptions differ in length push their buttons out of line. */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+/* Smaller padding than .see-more below because two of these share one row, and
+   .container-projects floors the card at minmax(320px, 1fr): flex-wrap plus the
+   0.5rem gap keeps a narrow card from overflowing. */
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.project-action:hover {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow);
+  color: #fff;
+}
+/* Same treatment as the .btn:focus-visible rule above; these links are not
+   .btn, so they would otherwise have no visible focus ring at all. */
+.project-action:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
 .see-more {
   display: table;
   margin: 3rem auto 0;

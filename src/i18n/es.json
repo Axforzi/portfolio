@@ -53,6 +53,8 @@
   "projectsPage": {
     "title": "Proyectos",
     "subtitle": "Casos de estudio",
+    "viewRepo": "Ver repo",
+    "visitSite": "Visitar web",
     "caseStudyLabel": "Caso de Estudio: Digitalización Empresarial (Kit Digital España)",
     "metric1": "Webs entregadas en producción",
     "metric2": "Puntuación Core Web Vitals",
