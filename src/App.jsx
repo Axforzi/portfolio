@@ -11,14 +11,42 @@ import Projects from './pages/Projects.jsx'
 import Services from './pages/Services.jsx'
 import NotFound from './pages/NotFound.jsx'
 
+// Route pathname -> i18n key suffix under `meta`. Anything missing falls through
+// to the 404 copy, which is exactly what the catch-all Route renders.
+const META_ROUTES = {
+  '/': 'home',
+  '/projects': 'projects',
+  '/services': 'services',
+}
+
 function App() {
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [modalData, setModalData] = useState({ isOpen: false, planName: '', planPrice: 0 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  // Per-route title and description. No react-helmet (zero new dependencies), so
+  // the two values are written onto the document by hand. The description tag is
+  // looked up and never created, so a route or language change updates the
+  // existing <meta> instead of appending a duplicate.
+  useEffect(() => {
+    // This map has to agree with <Routes>, and the router is more forgiving than a
+    // plain object lookup: matchRoutes() is case-insensitive and treats a trailing
+    // slash as a match. Without this, "/PROJECTS/" would render the Projects page
+    // under a "page not found" title.
+    const raw = location.pathname;
+    const path = (raw === '/' ? '/' : raw.replace(/\/+$/, '')).toLowerCase();
+    const route = META_ROUTES[path] || 'notFound';
+
+    document.title = t(`meta.${route}.title`);
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.setAttribute('content', t(`meta.${route}.description`));
+    }
+  }, [location.pathname, i18n.language]);
 
   const openModal = (planName, planPrice) => {
     setModalData({ isOpen: true, planName, planPrice });
