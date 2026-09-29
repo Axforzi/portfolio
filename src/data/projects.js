@@ -35,7 +35,7 @@ export const allProjects = [
     title: 'Scraper de novelas',
     description: 'Script automatizado para extraer novelas web y convertirlas en formato EPUB o PDF.',
     descriptionEn: 'Automated script to extract web novels and convert them to EPUB or PDF format.',
-    image: './img/novelScraper - logo.png',
+    image: './img/novelScraper-logo.png',
     imageAlt: 'novelScraper logo',
     url: 'https://github.com/Axforzi/novelScraper',
   },

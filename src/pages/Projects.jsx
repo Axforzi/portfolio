@@ -20,7 +20,8 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.imageAlt}
-                  style={project.imageInvert ? { filter: 'brightness(0) invert(1)' } : undefined}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="text">
