@@ -67,9 +67,10 @@ footer::before {
 }
 
 /* #1fad54 was previously an inline style on the element, which outranked every
-   stylesheet rule including :hover — so the hover tint below never actually
-   rendered. The value lives here now, and the dead hover background is gone so
-   the rendered colours stay byte-for-byte the same. */
+   stylesheet rule including :hover. That silently killed three greens the author
+   had written: this base colour, a lighter #25d366 underneath it, and the
+   #1da851 hover below. Restoring the hover means this button now has the
+   darker-on-hover affordance that was always intended but never rendered. */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -86,8 +87,12 @@ footer::before {
   margin-bottom: 0.5rem;
 }
 .btn-whatsapp:hover {
+  /* #1da851 was the author's original hover and had never rendered. The glow is
+     the same green as rgba(37, 211, 102), which was the base colour that the
+     inline style also hid — it no longer matches anything visible. */
+  background: #1da851;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 25px rgba(29, 168, 81, 0.4);
   color: #fff;
 }
 .btn-whatsapp i {
